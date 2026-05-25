@@ -50,7 +50,6 @@ html, body, [class*="css"] {
 }
 
 .stNumberInput label,
-.stTextInput label,
 .stSelectbox label {
     color: white !important;
     font-weight: 500;
@@ -69,6 +68,7 @@ div[data-baseweb="select"] > div {
     background-color: rgba(255,255,255,0.06) !important;
     border-radius: 14px !important;
     border: 1px solid rgba(255,255,255,0.08) !important;
+    color: white !important;
 }
 
 .stButton > button {
@@ -146,43 +146,111 @@ has_top_vc = st.selectbox(
     format_func=lambda x: "Yes" if x == 1 else "No"
 )
 
+# CITY OPTIONS
 city = st.selectbox(
     "Select City",
     [
+        "Ahmedabad",
         "Bangalore",
-        "Mumbai",
-        "Delhi",
-        "Hyderabad",
         "Chennai",
-        "Pune"
+        "Coimbatore",
+        "Delhi",
+        "Goa",
+        "Gurgaon",
+        "Hyderabad",
+        "Indore",
+        "Jaipur",
+        "Kanpur",
+        "Kochi",
+        "Kolkata",
+        "Mumbai",
+        "Noida",
+        "Pune",
+        "Surat"
     ]
 )
 
+# SUBVERTICAL OPTIONS
 subvertical = st.selectbox(
     "Select SubVertical",
     [
-        "FinTech",
-        "EdTech",
-        "HealthTech",
-        "E-commerce",
         "AI",
-        "SaaS"
+        "Analytics",
+        "Automobile",
+        "Beauty",
+        "Cloud Computing",
+        "Consumer Internet",
+        "Content",
+        "Delivery",
+        "E-commerce",
+        "EdTech",
+        "Enterprise Software",
+        "Fashion",
+        "FinTech",
+        "Fitness",
+        "Food Delivery",
+        "FoodTech",
+        "Gaming",
+        "HealthTech",
+        "Hospitality",
+        "Insurance",
+        "IoT",
+        "Logistics",
+        "Marketplace",
+        "Mobile",
+        "Payments",
+        "Real Estate",
+        "Recruitment",
+        "Ride Sharing",
+        "Robotics",
+        "SaaS",
+        "Security",
+        "Social Network",
+        "Sports",
+        "Technology",
+        "Travel",
+        "TravelTech"
     ]
 )
 
+# INDUSTRY OPTIONS
 industry = st.selectbox(
     "Select Industry",
     [
-        "Finance",
+        "Advertising",
+        "Agriculture",
+        "Automobile",
+        "Banking",
+        "Construction",
+        "Consumer Goods",
+        "E-commerce",
         "Education",
+        "Electronics",
+        "Energy",
+        "Entertainment",
+        "Fashion",
+        "Finance",
+        "Food",
+        "Gaming",
         "Healthcare",
-        "Technology",
+        "Hospitality",
+        "Insurance",
+        "IT Services",
+        "Logistics",
+        "Manufacturing",
+        "Media",
+        "Real Estate",
         "Retail",
-        "Software"
+        "Software",
+        "Sports",
+        "Technology",
+        "Telecommunications",
+        "Transportation",
+        "Travel"
     ]
 )
 
-# BUTTON
+# PREDICT BUTTON
 if st.button("Predict Startup Success"):
 
     with st.spinner("Analyzing startup ecosystem..."):
